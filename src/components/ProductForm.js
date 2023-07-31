@@ -17,14 +17,8 @@ const ProductForm=(props)=>{
 
     const submissionHandler=(event)=>{
         event.preventDefault();
-        const product={
-            itemNumber:itemNumber,
-            sellPrice:sellPrice,
-            productName:productName
-
-        }
-        localStorage.setItem(`${itemNumber}`,JSON.stringify(product));
-        props.onSave(sellPrice,productName);
+        
+        props.onSave(itemNumber,sellPrice,productName);
         setItemNumber('');
         setProductName('');
         setSellPrice('');

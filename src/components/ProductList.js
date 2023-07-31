@@ -1,9 +1,7 @@
 import React from "react";
 const ProductList=(props)=>{
     const handleDelete = (productId, productPrice) => {
-        // Delete the product from local storage
-        localStorage.removeItem(productId);
-        // Call the deleteHandler function from the parent component (App)
+        
         props.onDelete(productId, productPrice);
       };
     
